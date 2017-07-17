@@ -1,0 +1,58 @@
+{{ define "main" }}
+		<!-- Main -->
+			<div id="main">
+				<!-- Intro -->
+					<section id="top" class="one dark cover">
+						<div class="container">
+
+							<header>
+								<h2 class="alt">Hi! I'm <strong>Prologue</strong>, a <a href="http://html5up.net/license">free</a> responsive<br />
+								site template designed by <a href="http://html5up.net">HTML5 UP</a>.</h2>
+								<p>Ligula scelerisque justo sem accumsan diam quis<br />
+								vitae natoque dictum sollicitudin elementum.</p>
+							</header>
+
+							<footer>
+								<a href="#portfolio" class="button scrolly">Magna Aliquam</a>
+							</footer>
+
+						</div>
+					</section>
+					
+				<!-- Portfolio -->
+					<section id="portfolio" class="two">
+						<div class="container">
+    	<article class="post-preview">
+    	  <h2 class="post-title">{{ .Title }}</h2>
+    	  <h3 class="post-subtitle">
+    	    {{ if .Params.subtitle }}{{ .Params.subtitle }}&nbsp;|&nbsp;{{ end }}
+    	    {{ dateFormat "January 2, 2006" .Date }}
+    	    {{ if .Params.tags }}
+    	          &nbsp;|&nbsp;
+                {{ range .Params.tags }}
+                  <a href="{{ $.Site.LanguagePrefix }}/tags/{{ . | urlize }}">{{ . }}</a>&nbsp;
+                {{ end }}
+          {{ end }}
+    	  </h3>
+    	</article>
+      <article role="main" class="blog-post">
+        {{ .Content }}
+      </article>
+
+      <ul class="pager blog-pager">
+        {{ if .PrevInSection }}
+          <li class="previous">
+            <a href="{{ .PrevInSection.Permalink }}" data-toggle="tooltip" data-placement="top" title="{{ .PrevInSection.Title }}">&larr; {{ i18n "previousPost" }}</a>
+          </li>
+        {{ end }}
+        {{ if .NextInSection }}
+          <li class="next">
+            <a href="{{ .NextInSection.Permalink }}" data-toggle="tooltip" data-placement="top" title="{{ .NextInSection.Title }}">{{ i18n "nextPost" }} &rarr;</a>
+          </li>
+        {{ end }}
+      </ul>
+
+    </div>
+  </section>
+ </div>
+{{ end }}
