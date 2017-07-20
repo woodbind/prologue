@@ -1616,7 +1616,6 @@
 
 		header > p {
 			margin: 1em 1.2em 0 1.2em;
-			text-align: left;
 		}
 
 	footer {
@@ -1951,6 +1950,14 @@
 				font-size: 1em;
 			}
 
+		.item .text {
+			background: #fff;
+			margin: 0;
+			padding: 1em 1em 1em 1em;
+			font-size: 0.8em;
+			text-align: left;
+		}
+		
 /* Icons */
 
 	.icon {

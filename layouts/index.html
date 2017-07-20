@@ -35,14 +35,15 @@
                           <h4>
               	            {{ default (i18n "dateFormat") .Site.Params.dateformat | .Date.Format | i18n "postedOnDate" }}
                           </h4>
-
+                        </header>
+                        <div class="text">
              							{{ if .Truncated }}
                             {{ .Summary }}
                           {{ else }}
                             {{ .Content }}
                           {{ end }}
-
-                        </header>
+                        </div>
+                        
                       </article> 
 
 							      </div>
