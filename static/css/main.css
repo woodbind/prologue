@@ -1617,6 +1617,11 @@
 		header > p {
 			margin: 1em 1.2em 0 1.2em;
 		}
+		
+		header > a {
+			border-bottom: 0px;
+			font-size: 1.1em;
+		}
 
 	footer {
 		margin: 2em 0 0 0;
@@ -1671,7 +1676,7 @@
 	}
 
 	p, ul, ol, dl, table {
-		margin-bottom: 2em;
+		margin-bottom: 1.5em;
 	}
 
 	br.clear {
@@ -1692,6 +1697,10 @@
 
 		.row > section, .row > article {
 			margin-bottom: 0;
+		}
+		
+		article.blog-post {
+			text-align: left;
 		}
 
 /* Image */
@@ -1953,7 +1962,7 @@
 		.item .text {
 			background: #fff;
 			margin: 0;
-			padding: 1em 1em 1em 1em;
+			padding: 0em 1em 0.25em 1em;
 			font-size: 0.8em;
 			text-align: left;
 		}
